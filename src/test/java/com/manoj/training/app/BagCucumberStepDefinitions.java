@@ -1,16 +1,15 @@
 package com.manoj.training.app;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import io.cucumber.java8.En;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.IntStream;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.http.HttpStatus;
-
-import cucumber.api.java8.En;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class BagCucumberStepDefinitions extends SpringCucumberIntegrationTests implements En {
 	private final Logger log = LoggerFactory.getLogger(BagCucumberStepDefinitions.class);

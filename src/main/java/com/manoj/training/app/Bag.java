@@ -6,23 +6,23 @@ public class Bag {
 
 	private final ArrayList<String> things;
 
-   public Bag() {
-        things = new ArrayList<>();
-    }
+	public Bag() {
+		things = new ArrayList<>();
+	}
 
-    void add(final String something) {
-        things.add(something);
-    }
+	void add(final String something) {
+		things.add(something);
+	}
 
-    public ArrayList<String> getThings() {
-        return things;
-    }
+	public ArrayList<String> getThings() {
+		return things;
+	}
 
-    public boolean isEmpty() {
-        return things.isEmpty();
-    }
+	public boolean isEmpty() {
+		return things.isEmpty();
+	}
 
-    public void removeEverything() {
-        things.clear();
-    }
+	public void removeEverything() {
+		things.clear();
+	}
 }

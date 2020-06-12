@@ -1,24 +1,21 @@
 package com.manoj.training.app;
 
-import org.junit.runner.RunWith;
+import io.cucumber.spring.CucumberContextConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
-import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringRunner.class)
+@CucumberContextConfiguration
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public abstract class SpringCucumberIntegrationTests {
 
 	private final String SERVER_URL = "http://localhost";
 	private final String THINGS_ENDPOINT = "/things";
-
-	@Autowired
-	private TestRestTemplate restTemplate;
-
 	@LocalServerPort
 	protected int port;
+	@Autowired
+	private TestRestTemplate restTemplate;
 
 	private String thingsEndpoint() {
 		return SERVER_URL + ":" + port + THINGS_ENDPOINT;

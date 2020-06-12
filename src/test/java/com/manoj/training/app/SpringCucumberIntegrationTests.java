@@ -9,8 +9,7 @@ import org.springframework.web.client.RestTemplate;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@Ignore
-public class SpringCucumberIntegrationTests {
+public abstract class SpringCucumberIntegrationTests {
 
 	private final String SERVER_URL = "http://localhost";
 	private final String THINGS_ENDPOINT = "/things";
